@@ -21,7 +21,7 @@ public class SerialPortChannel {
         this.outputStream = new FileOutputStream(fileDescriptor);
     }
 
-    public void close(){
+    void close(){
         //写
         sendExecutorService.shutdown();
         try {
