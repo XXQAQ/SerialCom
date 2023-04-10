@@ -21,10 +21,10 @@ public class SerialPortCom {
                 onConnectListener.onSuccess(serialPortChannel);
             } catch (Exception e) {
                 e.printStackTrace();
-                onConnectListener.onError("","");
+                onConnectListener.onError(e.getMessage(),"");
             }
         } else {
-            onConnectListener.onError("allreday","");
+            onConnectListener.onError("already connected","");
         }
     }
 
